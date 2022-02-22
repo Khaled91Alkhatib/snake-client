@@ -8,8 +8,12 @@ const connect = function () {
   });
 
   conn.on("connect", () => {
-    console.log("Connected to server!");  // Will show up once a connection to server is successful,
+    console.log("Successfully connected to game server!");  // Will show up once a connection to server is successful,
   });
+
+  conn.on("connect", () => {
+    conn.write("Name: KAL");  // Writes a name identifying a character ingame,
+  })
 
   conn.on('data', (data) => {
     console.log(data.toString()); // Will show data written in Lighthouse Labs repository once you disconnect ("you ded cuz you idled");
