@@ -19,7 +19,7 @@ const connect = function () {
     console.log(data.toString()); // Will show data written in Lighthouse Labs repository once you disconnect ("you ded cuz you idled");
     conn.end();
   });
-
+  
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
