@@ -13,11 +13,6 @@ const connect = function () {
 
   conn.on("connect", () => {
     conn.write("Name: KAL")  // Writes a name identifying a character ingame,
-
-  //   conn.write("Move: up"),  // For experimenting purposes
-  //   conn.setTimeout(5000, function() {
-  //     conn.write("Move: right")
-  //   })
   });
 
   conn.on('data', (data) => {
@@ -30,8 +25,5 @@ const connect = function () {
 
   return conn;
 };
-
-console.log("Connecting ...");
-connect();
 
 module.exports = {connect};
