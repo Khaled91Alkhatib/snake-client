@@ -12,8 +12,13 @@ const connect = function () {
   });
 
   conn.on("connect", () => {
-    conn.write("Name: KAL");  // Writes a name identifying a character ingame,
-  })
+    conn.write("Name: KAL")  // Writes a name identifying a character ingame,
+
+  //   conn.write("Move: up"),  // For experimenting purposes
+  //   conn.setTimeout(5000, function() {
+  //     conn.write("Move: right")
+  //   })
+  });
 
   conn.on('data', (data) => {
     console.log(data.toString()); // Will show data written in Lighthouse Labs repository once you disconnect ("you ded cuz you idled");
